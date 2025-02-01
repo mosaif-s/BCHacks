@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #checkoutTitle {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #orderText {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #checkoutForm {
+            width: 600px; /* Increased the width to accommodate two products side by side */
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .products {
+            display: flex; /* Set the display property to flex */
+            flex-wrap: wrap; /* Allow the products to wrap to the next line if needed */
+            justify-content: space-between; /* Distribute the products evenly */
+        }
+
+        .product {
+            width: 48%; /* Set the width of each product to allow for some spacing */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .product-text {
+            text-align: left;
+            flex-grow: 1; /* Added to make the text fill the remaining space */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #totalPrice {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Galactic<span>Grub</span></h1>
+            </div>
+            <div class="searchBar">
+                <div class="header-option">
+                    Search
+                </div>
+                <div class="header-option">
+                    Sign In
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Food and drink on Venus</h1>
+    
+        <div class="products">
+            <div class="product" data-id="1">
+                <img src="Space_Food_pics\Moon Cookies.jpg" alt="Product 1" width="100%">
+                <h3>Moon cookies</h3>
+                <p>$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2">
+                <img src="Space_Food_pics\Space Smoothie1.jpg" alt="Product 1" width="100%">
+                <h3>Space Smoothie 1</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3">
+                <img src="Space_Food_pics\Astro Apple pie.jpg" alt="Product 1" width="100%">
+                <h3>Astro Apple Pie</h3>
+                <p>$59.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3">
+                <img src="Space_Food_pics\Space Smoothie2.jpg" alt="Product 1" width="100%">
+                <h3>Space Smoothie 2</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    
+        <!-- Add a button to navigate to the cart page -->
+        
+        <!-- Display the total on the index page -->
+        <p>Total: $<span id="total-amount">0.00</span></p>
+    
+        <!-- Add a button to navigate to the checkout page -->
+        <button id="checkout-button" class="checkout-button">Checkout</button>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

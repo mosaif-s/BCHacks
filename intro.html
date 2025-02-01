@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/the.mp4" type="video/mp4">
+        </video>
+    
+        <div class="content">
+            <h1 style="font-size: 40px;">Welcome Back!</h1>
+            <div class="lorb">
+                <div id="error-msg" class="error"></div>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="username" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="password" required>
+                <button onclick="validateLogin()">Login</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+<script>
+function validateLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var errorMessage = document.getElementById('error-msg');
+
+    // Example validation (replace with your own logic)
+    if (username === "admin" && password === "password") {
+        errorMessage.innerHTML = ""; // Clear previous error message
+        window.location.href = "dashboard.html";
+    } else {
+        errorMessage.innerHTML = "Invalid username or password";
+    }
+}
+</script>
+
+</html>

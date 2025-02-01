@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #checkoutTitle {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #orderText {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #checkoutForm {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .product img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        .product-text {
+            text-align: left;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #totalPrice {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="checkoutForm">
+    <div id="checkoutTitle">Checkout</div>
+    <div id="orderText">Your order</div>
+    
+    <div class="product">
+        <img src="Space_Food_pics\saturnsoupfood.jpg" alt="Product 2">
+        <div class="product-text">
+            <p>Saturn Soup</p>
+            <p>$1M</p>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="Space_Food_pics\Moon Cookies.jpg" alt="Product 1">
+        <div class="product-text">
+            <p>Moon Cookies</p>
+            <p>$1M</p>
+        </div>
+    </div>
+
+    
+
+    
+
+    <label for="planets">Select a Planet:</label>
+    <select id="planets" name="planets" required>
+        <option value="mercury">Mercury</option>
+        <option value="venus">Venus</option>
+        <option value="earth">Earth</option>
+        <option value="mars">Mars</option>
+        <option value="jupiter">Jupiter</option>
+        <option value="saturn">Saturn</option>
+        <option value="uranus">Uranus</option>
+        <option value="neptune">Neptune</option>
+        <!-- Add more planets as needed -->
+    </select>
+
+    <div id="totalPrice">$2M</div>
+    
+            <script src = "https://unpkg.com/feather-icons"></script>
+
+            <a href="thankyou.html" class="another-page-button">Place Order</a>
+            
+
+
+</div>
+    <script src = "https://unpkg.com/feather-icons"></script>
+
+    <script>
+        feather.replace();
+
+        function redirectToThankYou() {
+            // Redirect to the thankyou.html page
+            window.location.href = 'thankyou.html';
+        }
+    </script>
+    <script src="script.js"></script>
+
+
+    <script>
+        feather.replace()
+    </script>
+<script src="script.js"></script>
+</div>
+</body>
+</html>
